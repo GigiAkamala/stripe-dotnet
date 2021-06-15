@@ -7,6 +7,12 @@ namespace Stripe
     public class PaymentIntentPaymentMethodDataOptions : INestedOptions, IHasMetadata
     {
         /// <summary>
+        /// Generic card, if you want to create a PaymentIntent from card token
+        /// </summary>
+        [JsonProperty("card")]
+        public PaymentIntentPaymentMethodCard Card { get; set; }
+        
+        /// <summary>
         /// If this is an <c>acss_debit</c> PaymentMethod, this hash contains details about the ACSS
         /// Debit payment method.
         /// </summary>
